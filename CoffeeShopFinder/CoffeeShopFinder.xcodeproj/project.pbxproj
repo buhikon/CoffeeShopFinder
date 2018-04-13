@@ -14,6 +14,15 @@
 		D421F7162080B91C000E9C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D421F7142080B91C000E9C61 /* LaunchScreen.storyboard */; };
 		D421F7212080B91C000E9C61 /* CoffeeShopFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F7202080B91C000E9C61 /* CoffeeShopFinderTests.swift */; };
 		D421F72C2080B91C000E9C61 /* CoffeeShopFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F72B2080B91C000E9C61 /* CoffeeShopFinderUITests.swift */; };
+		D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E3F2080CA8B005434C4 /* BaseView.swift */; };
+		D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E412080CA92005434C4 /* BaseViewController.swift */; };
+		D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E432080CAA3005434C4 /* SplashViewController.swift */; };
+		D4FF5E462080CAAF005434C4 /* CoffeeShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E452080CAAF005434C4 /* CoffeeShopListViewController.swift */; };
+		D4FF5E482080CABE005434C4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E472080CABE005434C4 /* Color.swift */; };
+		D4FF5E4A2080CAD2005434C4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E492080CAD2005434C4 /* Font.swift */; };
+		D4FF5E4F2080CB10005434C4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E4E2080CB10005434C4 /* NetworkManager.swift */; };
+		D4FF5E512080CB18005434C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E502080CB18005434C4 /* LocationManager.swift */; };
+		D4FF5E532080CBEB005434C4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E522080CBEB005434C4 /* BaseNavigationController.swift */; };
 		F1801349FF6AAD71612CDB5E /* Pods_CoffeeShopFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844D919615BC0662612C48C3 /* Pods_CoffeeShopFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +60,15 @@
 		D421F7272080B91C000E9C61 /* CoffeeShopFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D421F72B2080B91C000E9C61 /* CoffeeShopFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopFinderUITests.swift; sourceTree = "<group>"; };
 		D421F72D2080B91C000E9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FF5E3F2080CA8B005434C4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D4FF5E412080CA92005434C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D4FF5E432080CAA3005434C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D4FF5E452080CAAF005434C4 /* CoffeeShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListViewController.swift; sourceTree = "<group>"; };
+		D4FF5E472080CABE005434C4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D4FF5E492080CAD2005434C4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		D4FF5E4E2080CB10005434C4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D4FF5E502080CB18005434C4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D4FF5E522080CBEB005434C4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +139,9 @@
 		D421F70A2080B91C000E9C61 /* CoffeeShopFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D4FF5E372080CA13005434C4 /* UI */,
+				D4FF5E382080CA1C005434C4 /* System */,
+				D4FF5E4B2080CAE3005434C4 /* Extensions */,
 				D421F70B2080B91C000E9C61 /* AppDelegate.swift */,
 				D421F70D2080B91C000E9C61 /* ViewController.swift */,
 				D421F70F2080B91C000E9C61 /* Main.storyboard */,
@@ -147,6 +168,100 @@
 				D421F72D2080B91C000E9C61 /* Info.plist */,
 			);
 			path = CoffeeShopFinderUITests;
+			sourceTree = "<group>";
+		};
+		D4FF5E372080CA13005434C4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E392080CA22005434C4 /* Base */,
+				D4FF5E3A2080CA41005434C4 /* Style */,
+				D4FF5E3B2080CA49005434C4 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D4FF5E382080CA1C005434C4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E4D2080CB02005434C4 /* Network */,
+				D4FF5E4C2080CAFD005434C4 /* Location */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		D4FF5E392080CA22005434C4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E3F2080CA8B005434C4 /* BaseView.swift */,
+				D4FF5E412080CA92005434C4 /* BaseViewController.swift */,
+				D4FF5E522080CBEB005434C4 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D4FF5E3A2080CA41005434C4 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E472080CABE005434C4 /* Color.swift */,
+				D4FF5E492080CAD2005434C4 /* Font.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		D4FF5E3B2080CA49005434C4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E3C2080CA5B005434C4 /* Splash */,
+				D4FF5E3D2080CA60005434C4 /* CoffeeShop */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D4FF5E3C2080CA5B005434C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E432080CAA3005434C4 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D4FF5E3D2080CA60005434C4 /* CoffeeShop */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E3E2080CA74005434C4 /* List */,
+			);
+			path = CoffeeShop;
+			sourceTree = "<group>";
+		};
+		D4FF5E3E2080CA74005434C4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E452080CAAF005434C4 /* CoffeeShopListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D4FF5E4B2080CAE3005434C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4FF5E4C2080CAFD005434C4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E502080CB18005434C4 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		D4FF5E4D2080CB02005434C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF5E4E2080CB10005434C4 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +457,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FF5E4F2080CB10005434C4 /* NetworkManager.swift in Sources */,
+				D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */,
+				D4FF5E512080CB18005434C4 /* LocationManager.swift in Sources */,
+				D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */,
 				D421F70E2080B91C000E9C61 /* ViewController.swift in Sources */,
+				D4FF5E482080CABE005434C4 /* Color.swift in Sources */,
+				D4FF5E4A2080CAD2005434C4 /* Font.swift in Sources */,
+				D4FF5E532080CBEB005434C4 /* BaseNavigationController.swift in Sources */,
 				D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */,
+				D4FF5E462080CAAF005434C4 /* CoffeeShopListViewController.swift in Sources */,
+				D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
