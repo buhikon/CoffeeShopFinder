@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D405837420822A4F0065266A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405837320822A4F0065266A /* BasePresenter.swift */; };
+		D405837620822A5E0065266A /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405837520822A5E0065266A /* SplashPresenter.swift */; };
 		D40B86E22081DFFD00E64C68 /* UIAlertController+Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B86E12081DFFD00E64C68 /* UIAlertController+Simple.swift */; };
 		D40B86E42081E01A00E64C68 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B86E32081E01A00E64C68 /* Helper.swift */; };
 		D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F70B2080B91C000E9C61 /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 		104FE2DF78E6E20A75B046CE /* Pods-CoffeeShopFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeShopFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeShopFinder/Pods-CoffeeShopFinder.release.xcconfig"; sourceTree = "<group>"; };
 		286D4C5C49239E4FAE148860 /* Pods-CoffeeShopFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeShopFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeShopFinder/Pods-CoffeeShopFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		844D919615BC0662612C48C3 /* Pods_CoffeeShopFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeShopFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D405837320822A4F0065266A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D405837520822A5E0065266A /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		D40B86E12081DFFD00E64C68 /* UIAlertController+Simple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Simple.swift"; sourceTree = "<group>"; };
 		D40B86E32081E01A00E64C68 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D421F7082080B91C000E9C61 /* CoffeeShopFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShopFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +198,7 @@
 				D4FF5E3F2080CA8B005434C4 /* BaseView.swift */,
 				D4FF5E412080CA92005434C4 /* BaseViewController.swift */,
 				D4FF5E522080CBEB005434C4 /* BaseNavigationController.swift */,
+				D405837320822A4F0065266A /* BasePresenter.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				D4FF5E432080CAA3005434C4 /* SplashViewController.swift */,
+				D405837520822A5E0065266A /* SplashPresenter.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF5E4F2080CB10005434C4 /* NetworkManager.swift in Sources */,
+				D405837620822A5E0065266A /* SplashPresenter.swift in Sources */,
 				D40B86E22081DFFD00E64C68 /* UIAlertController+Simple.swift in Sources */,
 				D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */,
 				D4FF5E512080CB18005434C4 /* LocationManager.swift in Sources */,
@@ -464,6 +471,7 @@
 				D4FF5E482080CABE005434C4 /* Color.swift in Sources */,
 				D4FF5E4A2080CAD2005434C4 /* Font.swift in Sources */,
 				D4FF5E532080CBEB005434C4 /* BaseNavigationController.swift in Sources */,
+				D405837420822A4F0065266A /* BasePresenter.swift in Sources */,
 				D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */,
 				D4FF5E462080CAAF005434C4 /* CoffeeShopListViewController.swift in Sources */,
 				D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */,
