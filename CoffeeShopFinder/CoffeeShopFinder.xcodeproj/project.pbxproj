@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40B86E22081DFFD00E64C68 /* UIAlertController+Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B86E12081DFFD00E64C68 /* UIAlertController+Simple.swift */; };
+		D40B86E42081E01A00E64C68 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B86E32081E01A00E64C68 /* Helper.swift */; };
 		D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F70B2080B91C000E9C61 /* AppDelegate.swift */; };
 		D421F7132080B91C000E9C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D421F7122080B91C000E9C61 /* Assets.xcassets */; };
 		D421F7162080B91C000E9C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D421F7142080B91C000E9C61 /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 		104FE2DF78E6E20A75B046CE /* Pods-CoffeeShopFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeShopFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeShopFinder/Pods-CoffeeShopFinder.release.xcconfig"; sourceTree = "<group>"; };
 		286D4C5C49239E4FAE148860 /* Pods-CoffeeShopFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeShopFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeShopFinder/Pods-CoffeeShopFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		844D919615BC0662612C48C3 /* Pods_CoffeeShopFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeShopFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40B86E12081DFFD00E64C68 /* UIAlertController+Simple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Simple.swift"; sourceTree = "<group>"; };
+		D40B86E32081E01A00E64C68 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D421F7082080B91C000E9C61 /* CoffeeShopFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShopFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D421F70B2080B91C000E9C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D421F7122080B91C000E9C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				D4FF5E382080CA1C005434C4 /* System */,
 				D4FF5E4B2080CAE3005434C4 /* Extensions */,
 				D421F70B2080B91C000E9C61 /* AppDelegate.swift */,
+				D40B86E32081E01A00E64C68 /* Helper.swift */,
 				D421F7122080B91C000E9C61 /* Assets.xcassets */,
 				D421F7142080B91C000E9C61 /* LaunchScreen.storyboard */,
 				D421F7172080B91C000E9C61 /* Info.plist */,
@@ -238,6 +243,7 @@
 		D4FF5E4B2080CAE3005434C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D40B86E12081DFFD00E64C68 /* UIAlertController+Simple.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF5E4F2080CB10005434C4 /* NetworkManager.swift in Sources */,
+				D40B86E22081DFFD00E64C68 /* UIAlertController+Simple.swift in Sources */,
 				D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */,
 				D4FF5E512080CB18005434C4 /* LocationManager.swift in Sources */,
 				D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */,
@@ -460,6 +467,7 @@
 				D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */,
 				D4FF5E462080CAAF005434C4 /* CoffeeShopListViewController.swift in Sources */,
 				D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */,
+				D40B86E42081E01A00E64C68 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
