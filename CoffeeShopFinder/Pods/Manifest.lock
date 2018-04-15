@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.7.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - ObjectMapper (3.1.0)
+  - Toast-Swift (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - NVActivityIndicatorView
+  - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+
+PODFILE CHECKSUM: f3da930fbd70a35d6896700f86742e040bb76551
+
+COCOAPODS: 1.4.0
