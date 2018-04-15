@@ -10,8 +10,17 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    /// this is automatically addded to *self.view* as a first childview.
     var mainView: UIView!
+    /**
+        if true, *mainView* will cover the status bar area.
+        - important: set the value before calling *super.loadView()* in *loadView()* in child class.
+    */
     var extendMainViewToTop: Bool = false
+    /**
+     if true, *mainView* will cover bottom home button area. it is effective only on 5.8 inches screen, iPhone X.
+     - important: set the value before calling *super.loadView()* in *loadView()* in child class.
+     */
     var extendMainViewToBottom: Bool = false
     
     override func loadView() {

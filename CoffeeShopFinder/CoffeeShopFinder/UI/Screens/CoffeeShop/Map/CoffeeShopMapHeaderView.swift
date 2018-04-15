@@ -9,7 +9,9 @@
 import UIKit
 
 protocol CoffeeShopMapHeaderViewDelegate : NSObjectProtocol {
+    /// user taps *Back* button
     func coffeeShopMapHeaderViewDidTapBackButton()
+    /// user taps *Call* button
     func makePhoneCall()
 }
 
@@ -33,6 +35,7 @@ class CoffeeShopMapHeaderView: BaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // create and set UI
         backgroundColor = UIColor.Coffee.background
         
         titleLabel = UILabel(frame: CGRect.zero)

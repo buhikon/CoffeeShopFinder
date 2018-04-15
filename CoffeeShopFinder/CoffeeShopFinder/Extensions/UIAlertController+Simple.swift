@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIAlertController {
+    /// show alertview
+    ///
+    /// - Parameters:
+    ///   - text: text to show in alertview
+    ///   - completion: this will be called when *OK* button tapped
     class func alert(text: String, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: text, message: nil, preferredStyle: .alert)

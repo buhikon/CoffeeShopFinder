@@ -5,6 +5,7 @@
 //  Created by Joey Lee on 15/4/18.
 //  Copyright © 2018 Joey Lee. All rights reserved.
 //
+//  this class helps to build URLRequest object.
 
 import Foundation
 

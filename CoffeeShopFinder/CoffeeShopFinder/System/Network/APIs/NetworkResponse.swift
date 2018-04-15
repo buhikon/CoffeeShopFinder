@@ -5,6 +5,7 @@
 //  Created by Joey Lee on 15/4/18.
 //  Copyright © 2018 Joey Lee. All rights reserved.
 //
+//  JSON object in response from server will be stored in the class which inherit this class.
 
 import ObjectMapper
 

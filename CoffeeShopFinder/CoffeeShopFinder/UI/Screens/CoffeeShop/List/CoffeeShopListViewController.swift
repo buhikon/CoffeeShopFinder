@@ -19,13 +19,14 @@ class CoffeeShopListViewController: BaseViewController {
     private var locationOffViewController: LocationOffViewController?
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: LocationManager.NotificationAuthorizationChange, object: nil)
+        removeNotificationObserver()
     }
     
     override func loadView() {
         extendMainViewToBottom = true
         super.loadView()
         
+        // create and set UI
         view.backgroundColor = UIColor.Coffee.background
         
         let headerHeight = 50
@@ -50,7 +51,7 @@ class CoffeeShopListViewController: BaseViewController {
         
         // check location authorization
         presenter.checkLocationAuthorization()
-        NotificationCenter.default.addObserver(self, selector: #selector(CoffeeShopListViewController.locationAuthorizationDidChange(notification:)), name: LocationManager.NotificationAuthorizationChange, object: nil)
+        addNotificationObserver()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -70,15 +71,26 @@ class CoffeeShopListViewController: BaseViewController {
         vc.coffeeShop = coffeeShop
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
-    // MARK: - notification
-    @objc func locationAuthorizationDidChange(notification: Notification) {
+    
+    // MARK: notification
+    /// add notification observer
+    private func addNotificationObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(CoffeeShopListViewController.locationAuthorizationDidChange(notification:)), name: LocationManager.NotificationAuthorizationChange, object: nil)
+    }
+    /// remove notification observer
+    private func removeNotificationObserver() {
+        NotificationCenter.default.removeObserver(self, name: LocationManager.NotificationAuthorizationChange, object: nil)
+    }
+    /// this function will be called when *LocationManager.NotificationAuthorizationChange* fired.
+    ///
+    /// - Parameter notification: Notification
+    @objc private func locationAuthorizationDidChange(notification: Notification) {
         presenter.checkLocationAuthorization()
     }
     
 }
 
-extension CoffeeShopListViewController : CoffeeShopListView {
+extension CoffeeShopListViewController: CoffeeShopListView {
     func setCoffeeShopList(_ coffeeShops: [CoffeeShop]) {
         self.coffeeShops = coffeeShops
         self.tableView.reloadData()
@@ -107,7 +119,7 @@ extension CoffeeShopListViewController : CoffeeShopListView {
     }
 }
 
-extension CoffeeShopListViewController : UITableViewDataSource, UITableViewDelegate {
+extension CoffeeShopListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coffeeShops.count
     }
@@ -121,7 +133,7 @@ extension CoffeeShopListViewController : UITableViewDataSource, UITableViewDeleg
     }
 }
 
-extension CoffeeShopListViewController : CoffeeShopListHeaderViewDelegate {
+extension CoffeeShopListViewController: CoffeeShopListHeaderViewDelegate {
     func coffeeShopListHeaderViewDidTrigger() {
         presenter.reloadData()
     }

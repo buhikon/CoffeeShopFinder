@@ -9,14 +9,22 @@
 import CoreLocation
 
 protocol SplashView : NSObjectProtocol {
+    /// show UIAlertController
+    ///
+    /// - Parameters:
+    ///   - text: text to show in alertview
+    ///   - completion: handler of *OK* button in alertview
     func alert(text: String, completion: (() -> Void)?)
-    func moveToLocationList()
+    /// move to *CoffeeShopListViewController*
+    func moveToCoffeeShopList()
 }
 
 class SplashPresenter: BasePresenter {
     weak var view: SplashView?
     
     // MARK: - internal functions
+    
+    /// check whether or not location authorization is granted.
     func requestWhenInUseAuthorization() {
         LocationManager.shared.requestWhenInUseAuthorization({ (status) in
             self.checkAuthoizationStatus(status)
@@ -24,6 +32,10 @@ class SplashPresenter: BasePresenter {
     }
     
     // MARK: - private functions
+    
+    /// check authorization status and do next process
+    ///
+    /// - Parameter status: CLAuthorizationStatus
     private func checkAuthoizationStatus(_ status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
@@ -41,10 +53,10 @@ class SplashPresenter: BasePresenter {
             }
         case .authorizedAlways:
             print("authoized always")
-            view?.moveToLocationList()
+            view?.moveToCoffeeShopList()
         case .authorizedWhenInUse:
             print("authoized when is use")
-            view?.moveToLocationList()
+            view?.moveToCoffeeShopList()
         }
     }
 }

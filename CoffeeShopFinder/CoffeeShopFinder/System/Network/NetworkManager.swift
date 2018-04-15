@@ -11,6 +11,10 @@ import Alamofire
 
 class NetworkManager: NSObject {
     
+    /// create URLRequest from `request` and call Alamofire.request(_ urlRequest)
+    ///
+    /// - Parameter request: child of NetworkRequest object
+    /// - Returns: The created `DataRequest`.
     @discardableResult
     public class func request(_ request: NetworkRequest) -> DataRequest {
         return Alamofire.request(request.urlRequest!)

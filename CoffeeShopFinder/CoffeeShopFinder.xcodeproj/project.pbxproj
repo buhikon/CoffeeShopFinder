@@ -14,8 +14,6 @@
 		D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F70B2080B91C000E9C61 /* AppDelegate.swift */; };
 		D421F7132080B91C000E9C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D421F7122080B91C000E9C61 /* Assets.xcassets */; };
 		D421F7162080B91C000E9C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D421F7142080B91C000E9C61 /* LaunchScreen.storyboard */; };
-		D421F7212080B91C000E9C61 /* CoffeeShopFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F7202080B91C000E9C61 /* CoffeeShopFinderTests.swift */; };
-		D421F72C2080B91C000E9C61 /* CoffeeShopFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421F72B2080B91C000E9C61 /* CoffeeShopFinderUITests.swift */; };
 		D4EB17052082F52700FB6C2F /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB17042082F52700FB6C2F /* NetworkConstant.swift */; };
 		D4EB170A2082F56500FB6C2F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB17092082F56500FB6C2F /* NetworkRequest.swift */; };
 		D4EB170C2082F56D00FB6C2F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB170B2082F56D00FB6C2F /* NetworkResponse.swift */; };
@@ -31,6 +29,8 @@
 		D4EB1729208321AF00FB6C2F /* CoffeeShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB1728208321AF00FB6C2F /* CoffeeShopMapViewController.swift */; };
 		D4EB172B208321C600FB6C2F /* CoffeeShopMapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB172A208321C600FB6C2F /* CoffeeShopMapHeaderView.swift */; };
 		D4EB172D208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB172C208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift */; };
+		D4EB172F208326CF00FB6C2F /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB172E208326CF00FB6C2F /* SplashPresenterTests.swift */; };
+		D4EB173120832B5100FB6C2F /* CoffeeShopListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB173020832B5100FB6C2F /* CoffeeShopListPresenterTests.swift */; };
 		D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E3F2080CA8B005434C4 /* BaseView.swift */; };
 		D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E412080CA92005434C4 /* BaseViewController.swift */; };
 		D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E432080CAA3005434C4 /* SplashViewController.swift */; };
@@ -45,13 +45,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		D421F71D2080B91C000E9C61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D421F7002080B91C000E9C61 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D421F7072080B91C000E9C61;
-			remoteInfo = CoffeeShopFinder;
-		};
-		D421F7282080B91C000E9C61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D421F7002080B91C000E9C61 /* Project object */;
 			proxyType = 1;
@@ -74,11 +67,7 @@
 		D421F7152080B91C000E9C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D421F7172080B91C000E9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D421F71C2080B91C000E9C61 /* CoffeeShopFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D421F7202080B91C000E9C61 /* CoffeeShopFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopFinderTests.swift; sourceTree = "<group>"; };
 		D421F7222080B91C000E9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D421F7272080B91C000E9C61 /* CoffeeShopFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D421F72B2080B91C000E9C61 /* CoffeeShopFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopFinderUITests.swift; sourceTree = "<group>"; };
-		D421F72D2080B91C000E9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4EB17042082F52700FB6C2F /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		D4EB17092082F56500FB6C2F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D4EB170B2082F56D00FB6C2F /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
@@ -94,6 +83,8 @@
 		D4EB1728208321AF00FB6C2F /* CoffeeShopMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapViewController.swift; sourceTree = "<group>"; };
 		D4EB172A208321C600FB6C2F /* CoffeeShopMapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapHeaderView.swift; sourceTree = "<group>"; };
 		D4EB172C208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapAnnotation.swift; sourceTree = "<group>"; };
+		D4EB172E208326CF00FB6C2F /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
+		D4EB173020832B5100FB6C2F /* CoffeeShopListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListPresenterTests.swift; sourceTree = "<group>"; };
 		D4FF5E3F2080CA8B005434C4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D4FF5E412080CA92005434C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D4FF5E432080CAA3005434C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -115,13 +106,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D421F7192080B91C000E9C61 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F7242080B91C000E9C61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -153,7 +137,6 @@
 			children = (
 				D421F70A2080B91C000E9C61 /* CoffeeShopFinder */,
 				D421F71F2080B91C000E9C61 /* CoffeeShopFinderTests */,
-				D421F72A2080B91C000E9C61 /* CoffeeShopFinderUITests */,
 				D421F7092080B91C000E9C61 /* Products */,
 				10BA017321686247CF921E2F /* Pods */,
 				1E8BB590A894A0388E96FAF6 /* Frameworks */,
@@ -165,7 +148,6 @@
 			children = (
 				D421F7082080B91C000E9C61 /* CoffeeShopFinder.app */,
 				D421F71C2080B91C000E9C61 /* CoffeeShopFinderTests.xctest */,
-				D421F7272080B91C000E9C61 /* CoffeeShopFinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,19 +170,11 @@
 		D421F71F2080B91C000E9C61 /* CoffeeShopFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D421F7202080B91C000E9C61 /* CoffeeShopFinderTests.swift */,
+				D4EB172E208326CF00FB6C2F /* SplashPresenterTests.swift */,
+				D4EB173020832B5100FB6C2F /* CoffeeShopListPresenterTests.swift */,
 				D421F7222080B91C000E9C61 /* Info.plist */,
 			);
 			path = CoffeeShopFinderTests;
-			sourceTree = "<group>";
-		};
-		D421F72A2080B91C000E9C61 /* CoffeeShopFinderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D421F72B2080B91C000E9C61 /* CoffeeShopFinderUITests.swift */,
-				D421F72D2080B91C000E9C61 /* Info.plist */,
-			);
-			path = CoffeeShopFinderUITests;
 			sourceTree = "<group>";
 		};
 		D4EB17062082F53800FB6C2F /* APIs */ = {
@@ -396,24 +370,6 @@
 			productReference = D421F71C2080B91C000E9C61 /* CoffeeShopFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D421F7262080B91C000E9C61 /* CoffeeShopFinderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D421F7362080B91C000E9C61 /* Build configuration list for PBXNativeTarget "CoffeeShopFinderUITests" */;
-			buildPhases = (
-				D421F7232080B91C000E9C61 /* Sources */,
-				D421F7242080B91C000E9C61 /* Frameworks */,
-				D421F7252080B91C000E9C61 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D421F7292080B91C000E9C61 /* PBXTargetDependency */,
-			);
-			name = CoffeeShopFinderUITests;
-			productName = CoffeeShopFinderUITests;
-			productReference = D421F7272080B91C000E9C61 /* CoffeeShopFinderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -429,11 +385,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					D421F71B2080B91C000E9C61 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D421F7072080B91C000E9C61;
-					};
-					D421F7262080B91C000E9C61 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D421F7072080B91C000E9C61;
@@ -455,7 +406,6 @@
 			targets = (
 				D421F7072080B91C000E9C61 /* CoffeeShopFinder */,
 				D421F71B2080B91C000E9C61 /* CoffeeShopFinderTests */,
-				D421F7262080B91C000E9C61 /* CoffeeShopFinderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -471,13 +421,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D421F71A2080B91C000E9C61 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F7252080B91C000E9C61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -589,15 +532,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D421F7212080B91C000E9C61 /* CoffeeShopFinderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F7232080B91C000E9C61 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D421F72C2080B91C000E9C61 /* CoffeeShopFinderUITests.swift in Sources */,
+				D4EB173120832B5100FB6C2F /* CoffeeShopListPresenterTests.swift in Sources */,
+				D4EB172F208326CF00FB6C2F /* SplashPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,11 +544,6 @@
 			isa = PBXTargetDependency;
 			target = D421F7072080B91C000E9C61 /* CoffeeShopFinder */;
 			targetProxy = D421F71D2080B91C000E9C61 /* PBXContainerItemProxy */;
-		};
-		D421F7292080B91C000E9C61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D421F7072080B91C000E9C61 /* CoffeeShopFinder */;
-			targetProxy = D421F7282080B91C000E9C61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -801,38 +732,6 @@
 			};
 			name = Release;
 		};
-		D421F7372080B91C000E9C61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5W63X96T22;
-				INFOPLIST_FILE = CoffeeShopFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.buhikon.CoffeeShopFinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoffeeShopFinder;
-			};
-			name = Debug;
-		};
-		D421F7382080B91C000E9C61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5W63X96T22;
-				INFOPLIST_FILE = CoffeeShopFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.buhikon.CoffeeShopFinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoffeeShopFinder;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -859,15 +758,6 @@
 			buildConfigurations = (
 				D421F7342080B91C000E9C61 /* Debug */,
 				D421F7352080B91C000E9C61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D421F7362080B91C000E9C61 /* Build configuration list for PBXNativeTarget "CoffeeShopFinderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D421F7372080B91C000E9C61 /* Debug */,
-				D421F7382080B91C000E9C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

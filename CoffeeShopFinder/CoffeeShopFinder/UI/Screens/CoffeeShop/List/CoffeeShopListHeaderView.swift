@@ -10,6 +10,9 @@ import UIKit
 import NVActivityIndicatorView
 
 protocol CoffeeShopListHeaderViewDelegate : NSObjectProtocol {
+    /// this will be called when,
+    ///   - timer fired
+    ///   - user taps *Reload* button
     func coffeeShopListHeaderViewDidTrigger()
 }
 
@@ -33,6 +36,7 @@ class CoffeeShopListHeaderView: BaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // create and set UI
         backgroundColor = UIColor.Coffee.background
         
         titleLabel = UILabel(frame: CGRect.zero)
@@ -77,14 +81,20 @@ class CoffeeShopListHeaderView: BaseView {
     }
     
     // MARK: - internal functions
+    
+    /// show loading indicator
     func showLoading() {
         reloadButton.isHidden = true
         loadingView.startAnimating()
     }
+    /// hide loading indicator
     func hideLoading() {
         reloadButton.isHidden = false
         loadingView.stopAnimating()
     }
+    /// start timer
+    ///
+    /// - Parameter interval: if 10.0, timer will be fired 10 secs later
     func startTimer(interval: TimeInterval) {
         stopTimer()
         
@@ -92,6 +102,7 @@ class CoffeeShopListHeaderView: BaseView {
             self.trigger()
         })
     }
+    /// stop timer
     func stopTimer() {
         if let timer = self.timer {
             timer.invalidate()
@@ -105,6 +116,8 @@ class CoffeeShopListHeaderView: BaseView {
     }
     
     // MARK: - private functions
+    
+    /// timer fired or *Reload* button tapped
     private func trigger() {
         stopTimer()
         if let delegate = self.delegate {

@@ -14,14 +14,14 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
     
     // defines
+    static var NotificationAuthorizationChange = NSNotification.Name(rawValue: "NotificationAuthorizationChange")
     typealias AuthorizationHandler = (CLAuthorizationStatus) -> Void
     typealias LocationHandler = (CLLocation?, Error?) -> Void
-    static var NotificationAuthorizationChange = NSNotification.Name(rawValue: "NotificationAuthorizationChange")
     
     // variables
-    var locationManager = CLLocationManager()
-    var authorizationHandler: AuthorizationHandler? = nil
-    var locationHandler: LocationHandler? = nil
+    private var locationManager = CLLocationManager()
+    private var authorizationHandler: AuthorizationHandler? = nil
+    private var locationHandler: LocationHandler? = nil
     
     override init() {
         super.init()
@@ -32,6 +32,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     // MARK: - public functions
+    
+    /// check whether or not location authorization is granted.
+    /// - discussion: if it is not determined, the system will show alertview and ask to user.
     public func requestWhenInUseAuthorization(_ handler: @escaping AuthorizationHandler) {
         let status = authorizationStatus()
         if status == .notDetermined {
@@ -42,13 +45,22 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             handler(status)
         }
     }
+    
+    /// check current authorization status
+    ///
+    /// - Returns: authoization status
     public func authorizationStatus() -> CLAuthorizationStatus {
         return CLLocationManager.authorizationStatus()
     }
+    /// check current authoization status is granted or not
+    /// this will be true if status is *.authorizedWhenInUse* or *.authorizedWhenInUse*.
     public var isGranted: Bool {
         let status = authorizationStatus()
         return (status == .authorizedWhenInUse || status == .authorizedAlways)
     }
+    /// get user location
+    ///
+    /// - Parameter handler: user location can be found in CLLocation
     public func getUserLocation(_ handler: @escaping LocationHandler) {
         locationHandler = handler
         locationManager.startUpdatingLocation()

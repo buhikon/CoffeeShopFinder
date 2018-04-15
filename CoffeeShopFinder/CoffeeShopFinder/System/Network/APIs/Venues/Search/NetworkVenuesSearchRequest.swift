@@ -5,6 +5,10 @@
 //  Created by Joey Lee on 15/4/18.
 //  Copyright © 2018 Joey Lee. All rights reserved.
 //
+//  API document:
+//  https://developer.foursquare.com/docs/api/venues/search
+//
+//  * only some of parameters are defined in this class. 
 
 import UIKit
 

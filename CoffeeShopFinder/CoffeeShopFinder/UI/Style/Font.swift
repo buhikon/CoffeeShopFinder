@@ -7,6 +7,10 @@
 //
 //  Default iOS fonts can be found below web page:
 //  http://iosfonts.com/
+//
+//  # Usage :
+//    UIFont.bold
+//    UIFont.light
 
 import UIKit
 

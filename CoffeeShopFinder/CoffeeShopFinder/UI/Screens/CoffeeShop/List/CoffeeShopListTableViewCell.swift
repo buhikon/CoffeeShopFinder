@@ -18,6 +18,7 @@ class CoffeeShopListTableViewCell: BaseTableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        // create and set UI
         selectionStyle = .gray
         
         nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
@@ -70,6 +71,10 @@ class CoffeeShopListTableViewCell: BaseTableViewCell {
     }
     
     // MARK: - internal functions
+    
+    /// update UI with argument coffeeShop
+    ///
+    /// - Parameter coffeeShop: CoffeeShop object to show
     func update(coffeeShop: CoffeeShop) {
         self.coffeeShop = coffeeShop
         

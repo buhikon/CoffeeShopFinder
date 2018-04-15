@@ -11,11 +11,23 @@ import Alamofire
 import AlamofireObjectMapper
 
 protocol CoffeeShopListView: NSObjectProtocol {
+    /// set CoffeeShop list to view
+    ///
+    /// - Parameter coffeeShops: array of CoffeeShop object
     func setCoffeeShopList(_ coffeeShops: [CoffeeShop])
+    /// notify to view that present *LocationOffViewController* if not presented
     func presentLocationOffViewController()
+    /// notify to view that dismiss *LocationOffViewController* if not dismissed
     func dismissLocationOffViewController()
+    /// show loading indicator on header
     func showLoadingOnHeaderView()
+    /// hide loading indicator on header, and reset timer with argument interval.
+    ///
+    /// - Parameter interval: interval for reset timer
     func hideLoadingAndStartTimerOnHeaderView(interval: TimeInterval)
+    /// make toast message on the bottom of screen, like Android.
+    ///
+    /// - Parameter text: text to show in toast
     func makeToast(_ text: String?)
 }
 
@@ -23,6 +35,8 @@ class CoffeeShopListPresenter: BasePresenter {
     weak var view: CoffeeShopListView?
     
     // MARK: - internal functions
+    
+    /// check current location authorization, and present or dismiss *LocationOffViewController*
     func checkLocationAuthorization() {
         if LocationManager.shared.isGranted == false {
             view?.presentLocationOffViewController()
@@ -31,6 +45,12 @@ class CoffeeShopListPresenter: BasePresenter {
             view?.dismissLocationOffViewController()
         }
     }
+    
+    /// reload CoffeeShop list
+    ///   1. get user location
+    ///   2. request coffee shop list to FourSquare server based on the user location
+    ///   3. create array of CoffeeShop
+    ///   4. deliver it to view
     func reloadData() {
         view?.showLoadingOnHeaderView()
         LocationManager.shared.getUserLocation { (location, error) in
@@ -56,6 +76,14 @@ class CoffeeShopListPresenter: BasePresenter {
     }
     
     // MARK: - private functions
+    
+    /// request coffee shop list to FourSquare server.
+    /// and create an array of CoffeeShop object.
+    ///
+    /// - Parameters:
+    ///   - latitude: latitude of user location
+    ///   - longitude: longitude of user location
+    ///   - completion: completion handler
     private func requestCoffeeShopList(latitude: Double, longitude: Double, completion: @escaping (String?) -> Void) {
         let request = NetworkVenuesSearchRequest.coffeeShop(latitude: latitude, longitude: longitude)
         NetworkManager.request(request).responseObject { (response: DataResponse<NetworkVenuesSearchResponse>) in

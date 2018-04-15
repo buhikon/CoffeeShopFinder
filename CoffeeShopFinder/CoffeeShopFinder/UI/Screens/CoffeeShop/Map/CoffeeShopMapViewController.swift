@@ -20,6 +20,7 @@ class CoffeeShopMapViewController: BaseViewController {
         extendMainViewToBottom = true
         super.loadView()
         
+        // create and set UI
         view.backgroundColor = UIColor.Coffee.background
         
         let headerHeight = 50
@@ -52,9 +53,12 @@ class CoffeeShopMapViewController: BaseViewController {
     }
     
     // MARK: - private functions
+    /// close view controller (pop)
     private func close() {
         self.navigationController?.popViewController(animated: true)
     }
+    /// set the region so that coffee can be on center of mapview.
+    /// and change pitch, so that buildings in the mapview will be 3D mode.
     private func centerMapOnCoffeeShop() {
         if let latitude = coffeeShop?.latitude, let longitude = coffeeShop?.longitude {
             let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -69,6 +73,7 @@ class CoffeeShopMapViewController: BaseViewController {
             mapView.camera = mapCamera
         }
     }
+    /// add annotation of coffee shop in mapview.
     private func addAnnotationOfCoffeeShop() {
         if let coffeeShop = coffeeShop {
             let annotation = CoffeeShopMapAnnotation(coffeeShop: coffeeShop)
