@@ -43,6 +43,8 @@ class CoffeeShopListHeaderView: BaseView {
         titleLabel.textColor = UIColor.white
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.bold(22.0)
+        titleLabel.minimumScaleFactor = 0.5
+        titleLabel.adjustsFontSizeToFitWidth = true
         self.addSubview(titleLabel)
         
         reloadButton = UIButton(type: .custom)
