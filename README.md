@@ -1,5 +1,5 @@
 # CoffeeShopFinder
-A swift sample app which provides local coffee shops based on user location using Four Square APIs.
+A sample swift app which provides information about local coffee shops based on user location using Four Square APIs.
 
 
 ## How to run code
@@ -23,9 +23,8 @@ $ pod update
 
 
 ## Approaches
-*Agile Approach*. Because I wanted to emphasis developing the app rather than predefined structured development.
+*Rapid applications development approach* for quick development. 
 
-I simply set a deadline to weekend, and started designing the structure. After that I started to write codes, test, and modify repeatedly.
 
 ## Assumptions
 - This project has been developed on Xcode 9.2
