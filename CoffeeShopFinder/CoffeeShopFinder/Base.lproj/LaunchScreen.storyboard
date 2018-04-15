@@ -17,7 +17,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.33725490200000002" green="0.2156862745" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="Gsa-oO-IvQ">
+                                <rect key="frame" x="101.5" y="229" width="172" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="F0m-5P-Oh7"/>
+                                    <constraint firstAttribute="width" constant="172" id="oWr-SY-xf8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed by Freepik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-gn-ktf">
+                                <rect key="frame" x="0.0" y="641" width="375" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33725490196078434" green="0.21568627450980393" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jGx-gn-ktf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8pw-EU-J8o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jGx-gn-ktf" secondAttribute="bottom" constant="10" id="Vif-ML-fhO"/>
+                            <constraint firstItem="Gsa-oO-IvQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fph-du-6Jz"/>
+                            <constraint firstItem="Gsa-oO-IvQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gGR-2h-aLu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jGx-gn-ktf" secondAttribute="trailing" id="k40-tW-t2W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +48,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee" width="172" height="208"/>
+    </resources>
 </document>

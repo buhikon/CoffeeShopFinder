@@ -11,10 +11,23 @@ import UIKit
 class SplashViewController: BaseViewController {
 
     var presenter = SplashPresenter()
+    var imageView: UIImageView!
     
     override func loadView() {
         super.loadView()
         view.backgroundColor = UIColor.Coffee.background
+        
+        imageView = UIImageView(image: UIImage(named: "coffee"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: 172),
+            imageView.heightAnchor.constraint(equalToConstant: 209),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ])
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +40,19 @@ class SplashViewController: BaseViewController {
     }
     
     // MARK: - private functions
-    private func animateLogo(completion: @escaping (() -> Void)) {
-        //TODO: implement an animation later...
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            completion()
-        }
+    private func animateLogo(completion:@escaping (() -> Void)) {
+        UIView.animate(withDuration: 2.0,
+                       delay: 0.0,
+                       usingSpringWithDamping: 1.0,
+                       initialSpringVelocity: 0.0,
+                       options: UIViewAnimationOptions.curveEaseInOut,
+                       animations: {
+                        self.imageView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                        self.imageView.alpha = 0.0
+        },
+                       completion: { (finish) in
+                        completion()
+        })
     }
 }
 
