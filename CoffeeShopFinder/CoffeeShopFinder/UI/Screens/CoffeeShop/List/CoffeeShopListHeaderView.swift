@@ -9,14 +9,14 @@
 import UIKit
 import NVActivityIndicatorView
 
-protocol CoffeeShopListHeaderViewDelegate {
+protocol CoffeeShopListHeaderViewDelegate : NSObjectProtocol {
     func coffeeShopListHeaderViewDidTrigger()
 }
 
 class CoffeeShopListHeaderView: BaseView {
     
-    public var delegate: CoffeeShopListHeaderViewDelegate? = nil
-    public var title: String? {
+    weak var delegate: CoffeeShopListHeaderViewDelegate? = nil
+    var title: String? {
         set {
             titleLabel.text = newValue
         }
@@ -60,6 +60,7 @@ class CoffeeShopListHeaderView: BaseView {
             titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
             ])
         NSLayoutConstraint.activate([
+            reloadButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0),
             reloadButton.topAnchor.constraint(equalTo: self.topAnchor),
             reloadButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 8.0),
             reloadButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -75,23 +76,23 @@ class CoffeeShopListHeaderView: BaseView {
         super.init(coder: aDecoder)
     }
     
-    // MARK: - public functions
-    public func showLoading() {
+    // MARK: - internal functions
+    func showLoading() {
         reloadButton.isHidden = true
         loadingView.startAnimating()
     }
-    public func hideLoading() {
+    func hideLoading() {
         reloadButton.isHidden = false
         loadingView.stopAnimating()
     }
-    public func startTimer(interval: TimeInterval) {
+    func startTimer(interval: TimeInterval) {
         stopTimer()
         
         timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { (timer) in
             self.trigger()
         })
     }
-    public func stopTimer() {
+    func stopTimer() {
         if let timer = self.timer {
             timer.invalidate()
             self.timer = nil
@@ -99,7 +100,7 @@ class CoffeeShopListHeaderView: BaseView {
     }
     
     // MARK: - event
-    @IBAction func reloadButtonTapped(_ sender: UIButton) {
+    @IBAction private func reloadButtonTapped(_ sender: UIButton) {
         trigger()
     }
     

@@ -12,12 +12,11 @@ import Toast_Swift
 
 class CoffeeShopListViewController: BaseViewController {
     
-    var presenter = CoffeeShopListPresenter()
-    
-    var headerView: CoffeeShopListHeaderView!
-    var tableView: UITableView!
-    var coffeeShops: [CoffeeShop] = []
-    var locationOffViewController: LocationOffViewController?
+    private var presenter = CoffeeShopListPresenter()
+    private var headerView: CoffeeShopListHeaderView!
+    private var tableView: UITableView!
+    private var coffeeShops: [CoffeeShop] = []
+    private var locationOffViewController: LocationOffViewController?
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: LocationManager.NotificationAuthorizationChange, object: nil)
@@ -65,6 +64,13 @@ class CoffeeShopListViewController: BaseViewController {
         return .lightContent
     }
     
+    // MARK: - private functions
+    private func moveToCoffeeShopMap(coffeeShop: CoffeeShop) {
+        let vc = CoffeeShopMapViewController()
+        vc.coffeeShop = coffeeShop
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
     // MARK: - notification
     @objc func locationAuthorizationDidChange(notification: Notification) {
         presenter.checkLocationAuthorization()
@@ -102,13 +108,16 @@ extension CoffeeShopListViewController : CoffeeShopListView {
 }
 
 extension CoffeeShopListViewController : UITableViewDataSource, UITableViewDelegate {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coffeeShops.count
     }
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeShopListTableViewCell", for: indexPath) as! CoffeeShopListTableViewCell
         cell.update(coffeeShop: coffeeShops[indexPath.row])
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        moveToCoffeeShopMap(coffeeShop: coffeeShops[indexPath.row])
     }
 }
 

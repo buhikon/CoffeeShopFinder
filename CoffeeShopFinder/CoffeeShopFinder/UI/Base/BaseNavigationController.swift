@@ -13,7 +13,7 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // hide the default navigation bar
         isNavigationBarHidden = true
     }
 

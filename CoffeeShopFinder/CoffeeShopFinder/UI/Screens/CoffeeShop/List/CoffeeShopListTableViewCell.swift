@@ -10,16 +10,15 @@ import UIKit
 
 class CoffeeShopListTableViewCell: BaseTableViewCell {
     
-    var coffeeShop: CoffeeShop?
-    
-    var nameLabel: UILabel!
-    var addressLabel: UILabel!
-    var distanceLabel: UILabel!
-    
+    private var coffeeShop: CoffeeShop?
+    private var nameLabel: UILabel!
+    private var addressLabel: UILabel!
+    private var distanceLabel: UILabel!
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        selectionStyle = .none
+        selectionStyle = .gray
         
         nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
         nameLabel.font = UIFont.bold(18.0)
@@ -70,8 +69,8 @@ class CoffeeShopListTableViewCell: BaseTableViewCell {
         // Configure the view for the selected state
     }
     
-    // MARK: - public functions
-    public func update(coffeeShop: CoffeeShop) {
+    // MARK: - internal functions
+    func update(coffeeShop: CoffeeShop) {
         self.coffeeShop = coffeeShop
         
         nameLabel.text = coffeeShop.name

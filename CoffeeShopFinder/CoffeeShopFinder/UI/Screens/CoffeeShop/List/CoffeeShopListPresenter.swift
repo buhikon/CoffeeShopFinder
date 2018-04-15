@@ -10,7 +10,7 @@ import CoreLocation
 import Alamofire
 import AlamofireObjectMapper
 
-protocol CoffeeShopListView {
+protocol CoffeeShopListView: NSObjectProtocol {
     func setCoffeeShopList(_ coffeeShops: [CoffeeShop])
     func presentLocationOffViewController()
     func dismissLocationOffViewController()
@@ -20,8 +20,9 @@ protocol CoffeeShopListView {
 }
 
 class CoffeeShopListPresenter: BasePresenter {
-    var view: CoffeeShopListView?
+    weak var view: CoffeeShopListView?
     
+    // MARK: - internal functions
     func checkLocationAuthorization() {
         if LocationManager.shared.isGranted == false {
             view?.presentLocationOffViewController()
@@ -66,12 +67,18 @@ class CoffeeShopListPresenter: BasePresenter {
                         for venue in venues {
                             if let name = venue.name,
                                 let address = venue.location?.address,
-                                let distance = venue.location?.distance
+                                let distance = venue.location?.distance,
+                                let latitude = venue.location?.lat,
+                                let longitude = venue.location?.lng,
+                                let phone = venue.contact?.phone
                             {
                                 let coffeeShop = CoffeeShop()
                                 coffeeShop.name = name
                                 coffeeShop.address = address
                                 coffeeShop.distance = distance
+                                coffeeShop.latitude = latitude
+                                coffeeShop.longitude = longitude
+                                coffeeShop.phone = phone
                                 coffeeShops.append(coffeeShop)
                             }
                         }

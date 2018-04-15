@@ -12,4 +12,7 @@ class CoffeeShop: NSObject {
     var name: String?
     var address: String?
     var distance: Int?
+    var latitude: Double?
+    var longitude: Double?
+    var phone: String?
 }

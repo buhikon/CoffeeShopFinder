@@ -28,6 +28,9 @@
 		D4EB171A2082FDBC00FB6C2F /* CoffeeShopListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB17192082FDBC00FB6C2F /* CoffeeShopListHeaderView.swift */; };
 		D4EB171D2082FE7900FB6C2F /* LocationOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB171C2082FE7900FB6C2F /* LocationOffViewController.swift */; };
 		D4EB171F2082FF6200FB6C2F /* Int+Comma.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB171E2082FF6200FB6C2F /* Int+Comma.swift */; };
+		D4EB1729208321AF00FB6C2F /* CoffeeShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB1728208321AF00FB6C2F /* CoffeeShopMapViewController.swift */; };
+		D4EB172B208321C600FB6C2F /* CoffeeShopMapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB172A208321C600FB6C2F /* CoffeeShopMapHeaderView.swift */; };
+		D4EB172D208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB172C208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift */; };
 		D4FF5E402080CA8B005434C4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E3F2080CA8B005434C4 /* BaseView.swift */; };
 		D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E412080CA92005434C4 /* BaseViewController.swift */; };
 		D4FF5E442080CAA3005434C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF5E432080CAA3005434C4 /* SplashViewController.swift */; };
@@ -88,6 +91,9 @@
 		D4EB17192082FDBC00FB6C2F /* CoffeeShopListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListHeaderView.swift; sourceTree = "<group>"; };
 		D4EB171C2082FE7900FB6C2F /* LocationOffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationOffViewController.swift; sourceTree = "<group>"; };
 		D4EB171E2082FF6200FB6C2F /* Int+Comma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Comma.swift"; sourceTree = "<group>"; };
+		D4EB1728208321AF00FB6C2F /* CoffeeShopMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapViewController.swift; sourceTree = "<group>"; };
+		D4EB172A208321C600FB6C2F /* CoffeeShopMapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapHeaderView.swift; sourceTree = "<group>"; };
+		D4EB172C208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopMapAnnotation.swift; sourceTree = "<group>"; };
 		D4FF5E3F2080CA8B005434C4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D4FF5E412080CA92005434C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D4FF5E432080CAA3005434C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +238,16 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		D4EB17272083219500FB6C2F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D4EB1728208321AF00FB6C2F /* CoffeeShopMapViewController.swift */,
+				D4EB172A208321C600FB6C2F /* CoffeeShopMapHeaderView.swift */,
+				D4EB172C208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		D4FF5E372080CA13005434C4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				D4FF5E3E2080CA74005434C4 /* List */,
+				D4EB17272083219500FB6C2F /* Map */,
 				D4EB17112082FD6400FB6C2F /* CoffeeShop.swift */,
 			);
 			path = CoffeeShop;
@@ -537,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EB170E2082F59C00FB6C2F /* NetworkVenuesSearchRequest.swift in Sources */,
+				D4EB1729208321AF00FB6C2F /* CoffeeShopMapViewController.swift in Sources */,
 				D4EB17122082FD6400FB6C2F /* CoffeeShop.swift in Sources */,
 				D4FF5E4F2080CB10005434C4 /* NetworkManager.swift in Sources */,
 				D405837620822A5E0065266A /* SplashPresenter.swift in Sources */,
@@ -549,12 +567,14 @@
 				D4FF5E422080CA92005434C4 /* BaseViewController.swift in Sources */,
 				D4FF5E482080CABE005434C4 /* Color.swift in Sources */,
 				D4EB171A2082FDBC00FB6C2F /* CoffeeShopListHeaderView.swift in Sources */,
+				D4EB172D208321CF00FB6C2F /* CoffeeShopMapAnnotation.swift in Sources */,
 				D4FF5E4A2080CAD2005434C4 /* Font.swift in Sources */,
 				D4FF5E532080CBEB005434C4 /* BaseNavigationController.swift in Sources */,
 				D405837420822A4F0065266A /* BasePresenter.swift in Sources */,
 				D421F70C2080B91C000E9C61 /* AppDelegate.swift in Sources */,
 				D4EB171F2082FF6200FB6C2F /* Int+Comma.swift in Sources */,
 				D4EB170C2082F56D00FB6C2F /* NetworkResponse.swift in Sources */,
+				D4EB172B208321C600FB6C2F /* CoffeeShopMapHeaderView.swift in Sources */,
 				D4EB17162082FD9A00FB6C2F /* BaseTableViewCell.swift in Sources */,
 				D4FF5E462080CAAF005434C4 /* CoffeeShopListViewController.swift in Sources */,
 				D4EB17182082FDAB00FB6C2F /* CoffeeShopListTableViewCell.swift in Sources */,

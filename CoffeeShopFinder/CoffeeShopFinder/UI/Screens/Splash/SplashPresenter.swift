@@ -8,21 +8,22 @@
 
 import CoreLocation
 
-protocol SplashView {
+protocol SplashView : NSObjectProtocol {
     func alert(text: String, completion: (() -> Void)?)
     func moveToLocationList()
 }
 
 class SplashPresenter: BasePresenter {
-    var view: SplashView?
+    weak var view: SplashView?
     
+    // MARK: - internal functions
     func requestWhenInUseAuthorization() {
         LocationManager.shared.requestWhenInUseAuthorization({ (status) in
             self.checkAuthoizationStatus(status)
         })
     }
     
-    // MARK: - private
+    // MARK: - private functions
     private func checkAuthoizationStatus(_ status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
