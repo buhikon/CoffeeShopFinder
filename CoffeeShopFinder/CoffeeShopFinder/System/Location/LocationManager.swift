@@ -45,7 +45,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     public func authorizationStatus() -> CLAuthorizationStatus {
         return CLLocationManager.authorizationStatus()
     }
-    public func startUpdatingLocation(_ handler: @escaping LocationHandler) {
+    public var isGranted: Bool {
+        let status = authorizationStatus()
+        return (status == .authorizedWhenInUse || status == .authorizedAlways)
+    }
+    public func getUserLocation(_ handler: @escaping LocationHandler) {
         locationHandler = handler
         locationManager.startUpdatingLocation()
     }

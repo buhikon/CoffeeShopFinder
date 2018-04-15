@@ -3,4 +3,6 @@ use_frameworks!
 target 'CoffeeShopFinder' do
     pod 'Alamofire'
 	pod 'NVActivityIndicatorView'
+    pod 'AlamofireObjectMapper'
+    pod 'Toast-Swift'
 end

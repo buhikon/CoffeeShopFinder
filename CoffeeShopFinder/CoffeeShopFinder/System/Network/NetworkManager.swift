@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class NetworkManager: NSObject {
-
+    
+    @discardableResult
+    public class func request(_ request: NetworkRequest) -> DataRequest {
+        return Alamofire.request(request.urlRequest!)
+    }
 }
